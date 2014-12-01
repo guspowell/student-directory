@@ -5,7 +5,9 @@ end
 
 def print(students)
 	students.each do |student|
-		puts "#{student[:number]}. #{student[:name]} (#{student[:cohort]} cohort)"
+		if student[:name].start_with?("a")
+			puts "#{student[:number]}. #{student[:name]} (#{student[:cohort]} cohort)"
+		end
 	end
 end
 
