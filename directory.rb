@@ -5,7 +5,7 @@ end
 
 def print(students)
 	students.each do |student|
-		puts "#{student[:name]} (#{student[:cohort]} cohort)"
+		puts "#{student[:number]}. #{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
 
@@ -19,12 +19,14 @@ def input_students
 	students = []
 	# get the first name
 	name = gets.chomp
+	number = 1
 	# while the name is not empty, repeat this code
 	while !name.empty? do
     	# add the student hash to the array
-    	students << {:name => name, :cohort => :november}
+    	students << {:number => number, :name => name, :cohort => :november}
     	puts "now we have #{students.length} great students"
     	# get another name from user
+    	number += 1
     	name = gets.chomp
     end
     # return the array of students
