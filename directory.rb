@@ -5,7 +5,7 @@ end
 
 def print(students)
 	students.each do |student|
-		if student[:name].start_with?("a")
+		if student[:name].length < 12
 			puts "#{student[:number]}. #{student[:name]} (#{student[:cohort]} cohort)"
 		end
 	end
