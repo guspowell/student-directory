@@ -1,6 +1,6 @@
 def print_header
-	puts "The students of my cohort at Makers Academy"
-	puts "--------------"
+	puts "The students of my cohort at Makers Academy".center(100)
+	puts "--------------".center(100)
 end
 
 def input_students
