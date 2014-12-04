@@ -17,7 +17,11 @@ def input_students
 		puts "what is #{name}'s country of origin?"    	
     	country = gets.chomp
     	students << {:number => number, :name => name, :cohort => cohort, :country => country}
-    	puts "now we have #{students.length} great students"
+    	if students.length == 1
+    		puts "now we have #{students.length} great student"
+    	else
+    		puts "now we have #{students.length} great students"
+    	end
     	# get another name from user
     	puts "please enter another name:"
     	number += 1
@@ -36,7 +40,11 @@ def print(students)
 end
 
 def print_footer(names)
-	puts "overall we have #{names.length} great students"
+	unless names.length == 1
+		puts "overall we have #{names.length} great students"
+	else
+		puts "overall we have #{names.length} great student"
+	end
 end
 
 
