@@ -14,9 +14,9 @@ def input_students
 	# while the name is not empty, repeat this code
 	while !name.empty? do
     	puts "what cohort is #{name} in?"
-    	cohort = gets.chomp
+    	cohort = STDIN.gets.chomp
 		puts "what is #{name}'s country of origin?"    	
-    	country = gets.chomp
+    	country = STDIN.gets.chomp
     	@students << {:number => number, :name => name, :cohort => cohort, :country => country}
     	if @students.length == 1
     		puts "now we have #{@students.length} great student"
