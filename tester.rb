@@ -11,9 +11,9 @@ end
 
 #def input_cohort(name)
 #	puts "what cohort is #{name} in?"
-#	@cohort = STDIN.gets.chomp
+#	cohort = STDIN.gets.chomp
 #	if cohort.empty?
-#		@cohort = "December"
+#		cohort = "December"
 #	end
 #end
 
@@ -42,6 +42,12 @@ def input_students
     end
     # return the array of students
     @students
+end
+
+def print_students_list
+	@students.each do |student|
+			puts "#{student[:number]}. #{student[:name]} (#{student[:cohort]} cohort) is from #{student[:country].capitalize}"
+	end
 end
 
 def print_students_list
